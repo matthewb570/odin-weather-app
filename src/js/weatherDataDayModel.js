@@ -1,5 +1,6 @@
 class WeatherDataDayModel {
     
+    date;
     icon;
     highTemp;
     lowTemp;
