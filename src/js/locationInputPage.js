@@ -1,5 +1,11 @@
 class LocationInputPage {
 
+    searchFunction;
+
+    constructor(searchFunction) {
+        this.searchFunction = searchFunction;
+    }
+
     createPage() {
         const divLocationInputPage = document.createElement("div");
         divLocationInputPage.id = "div-location-input-page";
@@ -43,6 +49,7 @@ class LocationInputPage {
         const btnSearch = document.createElement("button");
         btnSearch.type = "button";
         btnSearch.textContent = "Search";
+        btnSearch.onclick = () => this.searchFunction(txtLocation.value);
 
         const divLocationInputComponent = document.createElement("div");
         divLocationInputComponent.classList.add("location-search");
