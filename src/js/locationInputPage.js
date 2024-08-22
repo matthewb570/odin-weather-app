@@ -37,6 +37,7 @@ class LocationInputPage {
     createLocationInputComponent() {
         const txtLocation = document.createElement("input");
         txtLocation.id = "txt-location";
+        txtLocation.type="text";
         txtLocation.placeholder = "Show me the weather in...";
         
         const btnSearch = document.createElement("button");
