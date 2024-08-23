@@ -1,6 +1,10 @@
 @import url(https://fonts.bunny.net/css?family=roboto:400,400i,700);
 
 :root {
+    --icon-clear-night: url("../images/weather-night.svg");
+    --icon-partly-cloudy-night: url("../images/weather-night-partly-cloudy.svg");
+    --icon-precipitation: url("../images/water-cropped.svg");
+
     --standard-box-shadow: rgb(156, 156, 156) 1px 1px 5px;
 
     font-family: 'Roboto', sans-serif;
@@ -65,4 +69,59 @@ button {
     font-size: 1rem;
     font-weight: 700;
     padding: 10px;
+}
+
+.current-weather {
+    display: flex;
+    gap: 20px;
+}
+
+.primary-weather-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.primary-weather-info .icon {
+    height: 150px;
+    width: 150px;
+}
+
+.primary-weather-info .temperature {
+    font-size: 8rem;
+}
+
+.secondary-weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.precipitation-chance {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon {
+    background-color: black;
+    height: 25px;
+    width: 25px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.icon.clear-night {
+    mask-image: var(--icon-clear-night);
+}
+
+.icon.partly-cloudy-night {
+    mask-image: var(--icon-partly-cloudy-night);
+}
+
+.icon.precipitation {
+    mask-image: var(--icon-precipitation);
+    height: 15px;
+    width: 10px;
 }

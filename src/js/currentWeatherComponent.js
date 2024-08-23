@@ -22,7 +22,7 @@ class CurrentWeatherComponent {
 
         const divCurrentTemperature = document.createElement("div");
         divCurrentTemperature.classList.add("temperature");
-        divCurrentTemperature.textContent = this.weatherDataModel.currentTemp;
+        divCurrentTemperature.textContent = `${Math.round(this.weatherDataModel.currentTemp)}°`;
         
         const divPrimaryWeatherInfo = document.createElement("div");
         divPrimaryWeatherInfo.classList.add("primary-weather-info");
@@ -35,17 +35,17 @@ class CurrentWeatherComponent {
     createSecondaryWeatherInfo() {
         const divCurrentFeelsLike = document.createElement("div");
         divCurrentFeelsLike.classList.add("temperature");
-        divCurrentFeelsLike.textContent = `Feels like ${this.weatherDataModel.currentFeelsLike}`;
+        divCurrentFeelsLike.textContent = `Feels like ${Math.round(this.weatherDataModel.currentFeelsLike)}°`;
         
         const divHighLow = document.createElement("div");
         divHighLow.classList.add("temperature");
-        divHighLow.textContent = `${this.weatherDataModel.weeklongDataList[0].highTemp} / ${this.weatherDataModel.weeklongDataList[0].lowTemp}`;
+        divHighLow.textContent = `${Math.round(this.weatherDataModel.weeklongDataList[0].highTemp)}° / ${Math.round(this.weatherDataModel.weeklongDataList[0].lowTemp)}°`;
 
         const divSecondaryWeatherInfo = document.createElement("div");
         divSecondaryWeatherInfo.classList.add("secondary-weather-info");
         divSecondaryWeatherInfo.appendChild(divCurrentFeelsLike);
-        divSecondaryWeatherInfo.appendChild(this.createPrecipitationChance());
         divSecondaryWeatherInfo.appendChild(divHighLow);
+        divSecondaryWeatherInfo.appendChild(this.createPrecipitationChance());
 
         return divSecondaryWeatherInfo;
     }
@@ -57,7 +57,7 @@ class CurrentWeatherComponent {
         
         const divPrecipitationPercent = document.createElement("div");
         divPrecipitationPercent.classList.add("percent");
-        divPrecipitationPercent.textContent = `${this.weatherDataModel.currentPrecipitationChance}%`;
+        divPrecipitationPercent.textContent = `${Math.round(this.weatherDataModel.currentPrecipitationChance)}%`;
 
         const divPrecipitationChance = document.createElement("div");
         divPrecipitationChance.classList.add("precipitation-chance");
