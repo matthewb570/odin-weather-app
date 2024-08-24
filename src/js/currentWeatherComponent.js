@@ -1,5 +1,6 @@
 import HighLowTempComponent from "./highLowTempComponent";
 import PrecipitationChanceComponent from "./precipitationChanceComponent";
+import WeatherIconComponent from "./weatherIconComponent";
 
 class CurrentWeatherComponent {
 
@@ -19,9 +20,7 @@ class CurrentWeatherComponent {
     }
 
     createPrimaryWeatherInfo() {
-        const divCurrentWeatherIcon = document.createElement("div");
-        divCurrentWeatherIcon.classList.add("icon");
-        divCurrentWeatherIcon.classList.add(this.weatherDataModel.currentIcon);
+        const weatherIconComponent = new WeatherIconComponent(this.weatherDataModel.currentIcon);
 
         const divCurrentTemperature = document.createElement("div");
         divCurrentTemperature.classList.add("temperature");
@@ -29,7 +28,7 @@ class CurrentWeatherComponent {
         
         const divPrimaryWeatherInfo = document.createElement("div");
         divPrimaryWeatherInfo.classList.add("primary-weather-info");
-        divPrimaryWeatherInfo.appendChild(divCurrentWeatherIcon);
+        divPrimaryWeatherInfo.appendChild(weatherIconComponent.createComponent());
         divPrimaryWeatherInfo.appendChild(divCurrentTemperature);
 
         return divPrimaryWeatherInfo;
