@@ -1,3 +1,5 @@
+import PrecipitationChanceComponent from "./precipitationChanceComponent";
+
 class CurrentWeatherComponent {
 
     weatherDataModel;
@@ -41,30 +43,19 @@ class CurrentWeatherComponent {
         divHighLow.classList.add("temperature");
         divHighLow.textContent = `${Math.round(this.weatherDataModel.weeklongDataList[0].highTemp)}° / ${Math.round(this.weatherDataModel.weeklongDataList[0].lowTemp)}°`;
 
+        const precipitationChanceComponent = new PrecipitationChanceComponent(this.weatherDataModel.currentPrecipitationChance);
+
         const divSecondaryWeatherInfo = document.createElement("div");
         divSecondaryWeatherInfo.classList.add("secondary-weather-info");
         divSecondaryWeatherInfo.appendChild(divCurrentFeelsLike);
         divSecondaryWeatherInfo.appendChild(divHighLow);
-        divSecondaryWeatherInfo.appendChild(this.createPrecipitationChance());
+        divSecondaryWeatherInfo.appendChild(precipitationChanceComponent.createComponent());
 
         return divSecondaryWeatherInfo;
     }
 
     createPrecipitationChance() {
-        const divPrecipitationIcon = document.createElement("div");
-        divPrecipitationIcon.classList.add("icon");
-        divPrecipitationIcon.classList.add("precipitation");
         
-        const divPrecipitationPercent = document.createElement("div");
-        divPrecipitationPercent.classList.add("percent");
-        divPrecipitationPercent.textContent = `${Math.round(this.weatherDataModel.currentPrecipitationChance)}%`;
-
-        const divPrecipitationChance = document.createElement("div");
-        divPrecipitationChance.classList.add("precipitation-chance");
-        divPrecipitationChance.appendChild(divPrecipitationIcon);
-        divPrecipitationChance.appendChild(divPrecipitationPercent);
-
-        return divPrecipitationChance;
     }
 }
 
