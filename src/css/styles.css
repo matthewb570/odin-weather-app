@@ -1,8 +1,20 @@
 @import url(https://fonts.bunny.net/css?family=roboto:400,400i,700);
 
 :root {
-    --icon-clear-night: url("../images/weather-night.svg");
+    --icon-snow: url("../images/weather-snowy-heavy.svg");
+    --icon-snow-showers-day: url("../images/weather-partly-snowy.svg");
+    --icon-thunder-rain: url("../images/weather-lightning-rainy.svg");
+    --icon-thunder-showers-day: url("../images/weather-partly-lightning.svg");
+    --icon-rain: url("../images/weather-pouring.svg");
+    --icon-showers-day: url("../images/weather-partly-rainy.svg");
+    --icon-fog: url("../images/weather-fog.svg");
+    --icon-wind: url("../images/weather-windy.svg");
+    --icon-cloudy: url("../images/weather-cloudy.svg");
+    --icon-partly-cloudy-day: url("../images/weather-partly-cloudy.svg");
     --icon-partly-cloudy-night: url("../images/weather-night-partly-cloudy.svg");
+    --icon-clear-day: url("../images/weather-sunny.svg");
+    --icon-clear-night: url("../images/weather-night.svg");
+    
     --icon-precipitation: url("../images/water-cropped.svg");
 
     --standard-box-shadow: rgb(156, 156, 156) 1px 1px 5px;
@@ -112,12 +124,59 @@ button {
     mask-position: center;
 }
 
-.icon.clear-night {
-    mask-image: var(--icon-clear-night);
+.icon.snow,
+.icon-snow-showers-night {
+    mask-image: var(--icon-snow);
+}
+
+.icon.snow-showers-day {
+    mask-image: var(--icon-snow-showers-day);
+}
+
+.icon.thunder-rain,
+.icon.thunder-showers-night {
+    mask-image: var(--icon-thunder-rain);
+}
+
+.icon.thunder-showers-day {
+    mask-image: var(--icon-thunder-showers-day);
+}
+
+.icon.rain,
+.icon.showers-night {
+    mask-image: var(--icon-rain);
+}
+
+.icon.showers-day {
+    mask-image: var(--icon-showers-day);
+}
+
+.icon.fog {
+    mask-image: var(--icon-fog);
+}
+
+.icon.wind {
+    mask-image: var(--icon-wind);
+}
+
+.icon.cloudy {
+    mask-image: var(--icon-cloudy);
+}
+
+.icon.partly-cloudy-day {
+    mask-image: var(--icon-partly-cloudy-day);
 }
 
 .icon.partly-cloudy-night {
     mask-image: var(--icon-partly-cloudy-night);
+}
+
+.icon.clear-day {
+    mask-image: var(--icon-clear-day);
+}
+
+.icon.clear-night {
+    mask-image: var(--icon-clear-night);
 }
 
 .icon.precipitation {

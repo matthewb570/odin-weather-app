@@ -6,7 +6,7 @@ class VisualCrossingGateway {
     async timeline(location) {
         let locationUrlEncoded = encodeURIComponent(location);
 
-        let response = await fetch(`${this.VISUAL_CROSSING_ROOT_URL}/timeline/${locationUrlEncoded}?unitGroup=us&key=${this.API_KEY}&contentType=json`);
+        let response = await fetch(`${this.VISUAL_CROSSING_ROOT_URL}/timeline/${locationUrlEncoded}?unitGroup=us&key=${this.API_KEY}&contentType=json&iconSet=icons2`);
         let responseJson = await response.json();
         return responseJson;
     }
