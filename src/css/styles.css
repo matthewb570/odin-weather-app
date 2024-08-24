@@ -116,14 +116,22 @@ button {
     gap: 5px;
 }
 
+.daily-weather-list {
+    display: flex;
+    gap: 20px;
+
+    overflow-x: scroll;
+    width: 70%;
+}
+
 .daily-weather {
+    flex: 1 0 70px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    
-    width: 70px;
 
     border: solid 1px;
     border-radius: 10px;
