@@ -1,3 +1,4 @@
+import HighLowTempComponent from "./highLowTempComponent";
 import PrecipitationChanceComponent from "./precipitationChanceComponent";
 
 class CurrentWeatherComponent {
@@ -39,23 +40,17 @@ class CurrentWeatherComponent {
         divCurrentFeelsLike.classList.add("temperature");
         divCurrentFeelsLike.textContent = `Feels like ${Math.round(this.weatherDataModel.currentFeelsLike)}°`;
         
-        const divHighLow = document.createElement("div");
-        divHighLow.classList.add("temperature");
-        divHighLow.textContent = `${Math.round(this.weatherDataModel.weeklongDataList[0].highTemp)}° / ${Math.round(this.weatherDataModel.weeklongDataList[0].lowTemp)}°`;
+        const highLowTempComponent = new HighLowTempComponent(this.weatherDataModel.weeklongDataList[0].highTemp, this.weatherDataModel.weeklongDataList[0].lowTemp);
 
         const precipitationChanceComponent = new PrecipitationChanceComponent(this.weatherDataModel.currentPrecipitationChance);
 
         const divSecondaryWeatherInfo = document.createElement("div");
         divSecondaryWeatherInfo.classList.add("secondary-weather-info");
         divSecondaryWeatherInfo.appendChild(divCurrentFeelsLike);
-        divSecondaryWeatherInfo.appendChild(divHighLow);
+        divSecondaryWeatherInfo.appendChild(highLowTempComponent.createComponent());
         divSecondaryWeatherInfo.appendChild(precipitationChanceComponent.createComponent());
 
         return divSecondaryWeatherInfo;
-    }
-
-    createPrecipitationChance() {
-        
     }
 }
 
