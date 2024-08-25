@@ -8,7 +8,7 @@ class WeatherIconComponent {
 
     createComponent() {
         const divWeatherIcon = document.createElement("div");
-        divWeatherIcon.classList.add("icon");
+        divWeatherIcon.classList.add("weather-icon");
         divWeatherIcon.classList.add(this.iconDescription);
 
         return divWeatherIcon;
