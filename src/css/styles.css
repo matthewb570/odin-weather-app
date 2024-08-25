@@ -135,11 +135,11 @@ button {
 }
 
 .daily-weather-list-container .scroll-control.left {
-    left: 0px;
+    left: -2px;
 }
 
 .daily-weather-list-container .scroll-control.right {
-    right: 0px;
+    right: -2px;
 }
 
 .daily-weather-list {
