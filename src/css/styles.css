@@ -16,6 +16,9 @@
     
     --icon-precipitation: url("../images/water-cropped.svg");
 
+    --icon-left-arrow: url("../images/chevron-left.svg");
+    --icon-right-arrow: url("../images/chevron-right.svg");
+
     --standard-box-shadow: rgb(156, 156, 156) 1px 1px 5px;
 
     font-family: 'Roboto', sans-serif;
@@ -120,21 +123,23 @@ button {
 
     border: solid 1px lightgray;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px;
     width: 70%;
 }
 
 .daily-weather-list-container .scroll-control {
     position: absolute;
-    top: 80px;
+    top: 90px;
+    height: 30px;
+    width: 30px;
 }
 
 .daily-weather-list-container .scroll-control.left {
-    left: 25px;
+    left: 0px;
 }
 
 .daily-weather-list-container .scroll-control.right {
-    right: 25px;
+    right: 0px;
 }
 
 .daily-weather-list {
@@ -243,4 +248,12 @@ button {
     background-color: rgb(75, 75, 255);
     height: 15px;
     width: 10px;
+}
+
+.icon.left {
+    mask-image: var(--icon-left-arrow);
+}
+
+.icon.right {
+    mask-image: var(--icon-right-arrow);
 }
