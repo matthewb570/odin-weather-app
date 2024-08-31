@@ -1,5 +1,6 @@
 import HighLowTempComponent from "./highLowTempComponent";
 import PrecipitationChanceComponent from "./precipitationChanceComponent";
+import { UNIT_GROUP_US } from "./visualCrossingUnitGroupConstants";
 import WeatherIconComponent from "./weatherIconComponent";
 
 class CurrentWeatherComponent {
@@ -24,7 +25,7 @@ class CurrentWeatherComponent {
 
         const divCurrentTemperature = document.createElement("div");
         divCurrentTemperature.classList.add("temperature");
-        divCurrentTemperature.textContent = `${Math.round(this.weatherDataModel.currentTemp)}°`;
+        divCurrentTemperature.textContent = `${Math.round(this.weatherDataModel.currentTemp)}°${this.weatherDataModel.unitGroup == UNIT_GROUP_US ? "F" : "C"}`;
         
         const divPrimaryWeatherInfo = document.createElement("div");
         divPrimaryWeatherInfo.classList.add("primary-weather-info");

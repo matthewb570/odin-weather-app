@@ -1,5 +1,6 @@
 class WeatherDataModel {
     
+    unitGroup;
     location;
     currentIcon;
     currentTemp;
@@ -8,7 +9,8 @@ class WeatherDataModel {
 
     weeklongDataList;
 
-    constructor(location, currentIcon, currentTemp, currentFeelsLike, currentPrecipitationChance, weeklongDataList) {
+    constructor(unitGroup, location, currentIcon, currentTemp, currentFeelsLike, currentPrecipitationChance, weeklongDataList) {
+        this.unitGroup = unitGroup;
         this.location = location;
         this.currentIcon = currentIcon;
         this.currentTemp = currentTemp;

@@ -3,9 +3,10 @@ import WeatherDataDayModel from "./weatherDataDayModel";
 
 class WeatherDataModelMapper {
 
-    map(visualCrossingJson) {
+    map(visualCrossingJson, unitGroup) {
         let weatherDataModel = new WeatherDataModel();
         
+        weatherDataModel.unitGroup = unitGroup;
         weatherDataModel.location = visualCrossingJson.resolvedAddress;
         weatherDataModel.currentIcon = visualCrossingJson.currentConditions.icon;
         weatherDataModel.currentTemp = visualCrossingJson.currentConditions.temp;
