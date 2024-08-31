@@ -1,3 +1,5 @@
+import PageHeaderComponent from "./pageHeaderComponent";
+
 class LocationInputPage {
 
     searchFunction;
@@ -7,29 +9,15 @@ class LocationInputPage {
     }
 
     createPage() {
+        const divPageHeader = new PageHeaderComponent("Weather App").createComponent();
+        
         const divLocationInputPage = document.createElement("div");
         divLocationInputPage.id = "div-location-input-page";
         divLocationInputPage.classList.add("page");
-        divLocationInputPage.appendChild(this.createPageHeader());
+        divLocationInputPage.appendChild(divPageHeader);
         divLocationInputPage.appendChild(this.createPageContent());
 
         return divLocationInputPage;
-    }
-
-    createPageHeader() {
-        const divPageHeader = document.createElement("div");
-        divPageHeader.classList.add("page-header");
-        divPageHeader.appendChild(this.createPageTitle());
-        
-        return divPageHeader;
-    }
-
-    createPageTitle() {
-        const divPageTitle = document.createElement("div");
-        divPageTitle.classList.add("page-title");
-        divPageTitle.textContent = "Weather App";
-
-        return divPageTitle;
     }
 
     createPageContent() {
