@@ -170,6 +170,11 @@ button {
 }
 
 .daily-weather .date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     margin-bottom: 5px;
 }
 
