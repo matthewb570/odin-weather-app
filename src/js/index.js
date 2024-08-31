@@ -4,12 +4,6 @@ import WeatherDataModelMapper from "./mapper/weatherDataModelMapper";
 import LocationInputPage from "./page/locationInputPage";
 import WeatherPage from "./page/weatherPage";
 
-/*
-TODOs:
-1. (DONE) Add ability to toggle between F and C
-2. Change background color based on current weather conditions
-*/
-
 function searchFunction(searchValue, unitGroup) {
     
     let visualCrossingGateway = new VisualCrossingGateway();
