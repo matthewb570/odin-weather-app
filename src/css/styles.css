@@ -67,6 +67,21 @@ body {
     gap: 10px;
 }
 
+.temp-unit-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.temp-unit-selector input[type="radio"] {
+    margin-top: -1px;
+}
+
+.temp-unit-selector label {
+    display: flex;
+    align-items: center;
+}
+
 input[type="text"] {
     background-color: var(--textbox-accent-color);
     padding: 10px;
