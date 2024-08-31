@@ -62,6 +62,14 @@ body {
     align-items: center;
 }
 
+.page-footer {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+
+    padding-bottom: 3px;
+}
+
 .location-search {
     display: flex;
     gap: 10px;
@@ -109,17 +117,24 @@ button {
     font-weight: 700;
 }
 
-#div-weather-page .page-content.sunny-theme {
+#div-weather-page .page-content.sunny-theme,
+#div-weather-page .page-footer.sunny-theme {
     background-color: skyblue;
 }
 
-#div-weather-page .page-content.cloudy-theme {
+#div-weather-page .page-content.cloudy-theme,
+#div-weather-page .page-footer.cloudy-theme {
     background-color: gray;
 }
 
-#div-weather-page .page-content.night-theme {
+#div-weather-page .page-content.night-theme,
+#div-weather-page .page-footer.night-theme {
     background-color: rgb(30, 30, 30);
     color: white;
+}
+
+a {
+    color: inherit;
 }
 
 .current-weather {

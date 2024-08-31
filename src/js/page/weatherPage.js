@@ -18,20 +18,21 @@ class WeatherPage {
     }
 
     createPage() {
+        const currentConditionsClass = this.currentConditionsMapper.map(this.weatherDataModel.currentIcon);
+        
         const divLocationSearch = new LocationSearchComponent(this.searchFunction).createComponent();
         
         const divWeatherPage = document.createElement("div");
         divWeatherPage.id = "div-weather-page";
         divWeatherPage.classList.add("page");
         divWeatherPage.appendChild(new PageHeaderComponent("Weather App", divLocationSearch).createComponent());
-        divWeatherPage.appendChild(this.createPageContent());
+        divWeatherPage.appendChild(this.createPageContent(currentConditionsClass));
+        divWeatherPage.appendChild(this.createPageFooter(currentConditionsClass));
 
         return divWeatherPage;
     }
 
-    createPageContent() {
-        const currentConditionsClass = this.currentConditionsMapper.map(this.weatherDataModel.currentIcon);
-        
+    createPageContent(currentConditionsClass) {
         const divLocation = document.createElement("div");
         divLocation.classList.add("location");
         divLocation.textContent = this.weatherDataModel.location;
@@ -48,6 +49,22 @@ class WeatherPage {
         divPageContent.appendChild(dailyWeatherListContainerComponent.createComponent());
 
         return divPageContent;
+    }
+
+    createPageFooter(currentConditionsClass) {
+        const divIconAcknowledgementMessage = document.createElement("div");
+        divIconAcknowledgementMessage.textContent = "Weather icons provided by ";
+        
+        const linkIconAcknowledgementLink = document.createElement("a");
+        linkIconAcknowledgementLink.href = "https://icons8.com";
+        linkIconAcknowledgementLink.textContent = "Icons8";
+
+        const divPageFooter = document.createElement("div");
+        divPageFooter.classList.add("page-footer", currentConditionsClass);
+        divPageFooter.appendChild(divIconAcknowledgementMessage);
+        divPageFooter.appendChild(linkIconAcknowledgementLink);
+
+        return divPageFooter;
     }
 }
 
