@@ -27,6 +27,10 @@ class WeatherPage {
     }
 
     createPageContent() {
+        const divLocation = document.createElement("div");
+        divLocation.classList.add("location");
+        divLocation.textContent = this.weatherDataModel.location;
+        
         let currentWeatherComponent = new CurrentWeatherComponent(this.weatherDataModel);
 
         let dailyWeatherListComponent = new DailyWeatherListComponent(this.weatherDataModel.weeklongDataList);
@@ -34,6 +38,7 @@ class WeatherPage {
         
         const divPageContent = document.createElement("div");
         divPageContent.classList.add("page-content");
+        divPageContent.appendChild(divLocation);
         divPageContent.appendChild(currentWeatherComponent.createComponent());
         divPageContent.appendChild(dailyWeatherListContainerComponent.createComponent());
 

@@ -6,6 +6,7 @@ class WeatherDataModelMapper {
     map(visualCrossingJson) {
         let weatherDataModel = new WeatherDataModel();
         
+        weatherDataModel.location = visualCrossingJson.resolvedAddress;
         weatherDataModel.currentIcon = visualCrossingJson.currentConditions.icon;
         weatherDataModel.currentTemp = visualCrossingJson.currentConditions.temp;
         weatherDataModel.currentFeelsLike = visualCrossingJson.currentConditions.feelslike;
