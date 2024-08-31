@@ -41,12 +41,14 @@ body {
     display: flex;
     align-items: center;
 
-    height: 50px;
+    height: 65px;
     box-shadow: var(--standard-box-shadow);
     padding: 0 20px;
 }
 
 .page-title {
+    flex: 1;
+    
     font-size: 2rem;
     font-weight: 700;
 }
