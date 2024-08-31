@@ -87,6 +87,13 @@ button {
     padding: 10px;
 }
 
+#div-weather-page .location {
+    margin-bottom: 12vh;
+
+    font-size: 3rem;
+    font-weight: 700;
+}
+
 .current-weather {
     display: flex;
     gap: 20px;
