@@ -94,6 +94,12 @@ button {
     font-weight: 700;
 }
 
+#div-weather-page .page-content {
+    /* background-color: skyblue; */
+    /* background-color: gray; */
+    /* background-color: rgb(40, 40, 40); */
+}
+
 .current-weather {
     display: flex;
     gap: 20px;
@@ -138,7 +144,7 @@ button {
 
 .daily-weather-list-container .scroll-control {
     position: absolute;
-    top: 90px;
+    top: 100px;
     height: 30px;
     width: 30px;
 }
