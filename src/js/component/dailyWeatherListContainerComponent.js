@@ -3,9 +3,11 @@ const DAILY_WEATHER_ITEM_WIDTH = 112;
 class DailyWeatherListContainerComponent {
 
     dailyWeatherListComponent;
+    currentConditionsClass;
 
-    constructor(dailyWeatherListComponent) {
+    constructor(dailyWeatherListComponent, currentConditionsClass) {
         this.dailyWeatherListComponent = dailyWeatherListComponent;
+        this.currentConditionsClass = currentConditionsClass;
     }
 
     createComponent() {
@@ -24,7 +26,7 @@ class DailyWeatherListContainerComponent {
         }
         
         const divDailyWeatherListContainer = document.createElement("div");
-        divDailyWeatherListContainer.classList.add("daily-weather-list-container");
+        divDailyWeatherListContainer.classList.add("daily-weather-list-container", this.currentConditionsClass);
         divDailyWeatherListContainer.appendChild(divDailyWeatherList);
         divDailyWeatherListContainer.appendChild(btnScrollLeft);
         divDailyWeatherListContainer.appendChild(btnScrollRight);

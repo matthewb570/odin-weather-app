@@ -109,10 +109,17 @@ button {
     font-weight: 700;
 }
 
-#div-weather-page .page-content {
-    /* background-color: skyblue; */
-    /* background-color: gray; */
-    /* background-color: rgb(40, 40, 40); */
+#div-weather-page .page-content.sunny-theme {
+    background-color: skyblue;
+}
+
+#div-weather-page .page-content.cloudy-theme {
+    background-color: gray;
+}
+
+#div-weather-page .page-content.night-theme {
+    background-color: rgb(30, 30, 30);
+    color: white;
 }
 
 .current-weather {
@@ -151,10 +158,21 @@ button {
 .daily-weather-list-container {
     position: relative;
 
-    border: solid 1px lightgray;
     border-radius: 10px;
     padding: 25px;
     width: 70%;
+}
+
+.daily-weather-list-container.sunny-theme {
+    background-color: rgb(152, 211, 235);
+}
+
+.daily-weather-list-container.cloudy-theme {
+    background-color: rgb(145, 145, 145);
+}
+
+.daily-weather-list-container.night-theme {
+    background-color: rgb(50, 50, 50);
 }
 
 .daily-weather-list-container .scroll-control {
@@ -192,7 +210,6 @@ button {
     align-items: center;
     gap: 5px;
 
-    border: solid lightgray 1px;
     border-radius: 10px;
     padding: 10px;
 }
@@ -228,7 +245,7 @@ button {
 
 .weather-icon.snow,
 .weather-icon.snow-showers-day,
-.weather-icon-snow-showers-night {
+.weather-icon.snow-showers-night {
     background-image: var(--icon-snow);
 }
 

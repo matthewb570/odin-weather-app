@@ -3,13 +3,16 @@ import DailyWeatherListComponent from "../component/dailyWeatherListComponent";
 import DailyWeatherListContainerComponent from "../component/dailyWeatherListContainerComponent";
 import LocationSearchComponent from "../component/locationSearchComponent";
 import PageHeaderComponent from "../component/pageHeaderComponent";
+import CurrentConditionsMapper from "../mapper/currentConditionsMapper";
 
 class WeatherPage {
 
+    currentConditionsMapper;
     weatherDataModel;
     searchFunction;
 
     constructor(weatherDataModel, searchFunction) {
+        this.currentConditionsMapper = new CurrentConditionsMapper();
         this.weatherDataModel = weatherDataModel;
         this.searchFunction = searchFunction;
     }
@@ -27,6 +30,8 @@ class WeatherPage {
     }
 
     createPageContent() {
+        const currentConditionsClass = this.currentConditionsMapper.map(this.weatherDataModel.currentIcon);
+        
         const divLocation = document.createElement("div");
         divLocation.classList.add("location");
         divLocation.textContent = this.weatherDataModel.location;
@@ -34,10 +39,10 @@ class WeatherPage {
         let currentWeatherComponent = new CurrentWeatherComponent(this.weatherDataModel);
 
         let dailyWeatherListComponent = new DailyWeatherListComponent(this.weatherDataModel.weeklongDataList);
-        let dailyWeatherListContainerComponent = new DailyWeatherListContainerComponent(dailyWeatherListComponent);
+        let dailyWeatherListContainerComponent = new DailyWeatherListContainerComponent(dailyWeatherListComponent, currentConditionsClass);
         
         const divPageContent = document.createElement("div");
-        divPageContent.classList.add("page-content");
+        divPageContent.classList.add("page-content", currentConditionsClass);
         divPageContent.appendChild(divLocation);
         divPageContent.appendChild(currentWeatherComponent.createComponent());
         divPageContent.appendChild(dailyWeatherListContainerComponent.createComponent());
