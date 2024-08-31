@@ -1,8 +1,8 @@
-import CurrentWeatherComponent from "./currentWeatherComponent";
-import DailyWeatherListComponent from "./dailyWeatherListComponent";
-import DailyWeatherListContainerComponent from "./dailyWeatherListContainerComponent";
-import LocationSearchComponent from "./locationSearchComponent";
-import PageHeaderComponent from "./pageHeaderComponent";
+import CurrentWeatherComponent from "../component/currentWeatherComponent";
+import DailyWeatherListComponent from "../component/dailyWeatherListComponent";
+import DailyWeatherListContainerComponent from "../component/dailyWeatherListContainerComponent";
+import LocationSearchComponent from "../component/locationSearchComponent";
+import PageHeaderComponent from "../component/pageHeaderComponent";
 
 class WeatherPage {
 

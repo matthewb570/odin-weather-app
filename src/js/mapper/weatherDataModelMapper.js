@@ -1,5 +1,5 @@
-import WeatherDataModel from "./weatherDataModel";
-import WeatherDataDayModel from "./weatherDataDayModel";
+import WeatherDataModel from "../model/weatherDataModel";
+import WeatherDataDayModel from "../model/weatherDataDayModel";
 
 class WeatherDataModelMapper {
 

@@ -1,5 +1,5 @@
-import LocationSearchComponent from "./locationSearchComponent";
-import PageHeaderComponent from "./pageHeaderComponent";
+import LocationSearchComponent from "../component/locationSearchComponent";
+import PageHeaderComponent from "../component/pageHeaderComponent";
 
 class LocationInputPage {
 

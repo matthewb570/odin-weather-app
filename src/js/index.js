@@ -1,12 +1,12 @@
 import "../css/styles.css";
-import VisualCrossingGateway from "./visualCrossingGateway";
-import WeatherDataModelMapper from "./weatherDataModelMapper";
-import LocationInputPage from "./locationInputPage";
-import WeatherPage from "./weatherPage";
+import VisualCrossingGateway from "./gateway/visualCrossingGateway";
+import WeatherDataModelMapper from "./mapper/weatherDataModelMapper";
+import LocationInputPage from "./page/locationInputPage";
+import WeatherPage from "./page/weatherPage";
 
 /*
 TODOs:
-1. Add ability to toggle between F and C
+1. (DONE) Add ability to toggle between F and C
 2. Change background color based on current weather conditions
 */
 

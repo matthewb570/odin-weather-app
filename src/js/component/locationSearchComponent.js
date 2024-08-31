@@ -1,5 +1,5 @@
 import TempUnitSelectorComponent from "./tempUnitSelectorComponent";
-import { UNIT_GROUP_METRIC, UNIT_GROUP_US } from "./visualCrossingUnitGroupConstants";
+import { UNIT_GROUP_METRIC, UNIT_GROUP_US } from "../constants/visualCrossingUnitGroupConstants";
 
 class LocationSearchComponent {
 

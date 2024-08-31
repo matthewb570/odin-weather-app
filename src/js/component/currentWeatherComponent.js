@@ -1,6 +1,6 @@
 import HighLowTempComponent from "./highLowTempComponent";
 import PrecipitationChanceComponent from "./precipitationChanceComponent";
-import { UNIT_GROUP_US } from "./visualCrossingUnitGroupConstants";
+import { UNIT_GROUP_US } from "../constants/visualCrossingUnitGroupConstants";
 import WeatherIconComponent from "./weatherIconComponent";
 
 class CurrentWeatherComponent {
