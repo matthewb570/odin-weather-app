@@ -1,3 +1,4 @@
+import LocationSearchComponent from "./locationSearchComponent";
 import PageHeaderComponent from "./pageHeaderComponent";
 
 class LocationInputPage {
@@ -23,28 +24,9 @@ class LocationInputPage {
     createPageContent() {
         const divPageContent = document.createElement("div");
         divPageContent.classList.add("page-content");
-        divPageContent.appendChild(this.createLocationInputComponent());
+        divPageContent.appendChild(new LocationSearchComponent(this.searchFunction).createComponent());
 
         return divPageContent;
-    }
-
-    createLocationInputComponent() {
-        const txtLocation = document.createElement("input");
-        txtLocation.id = "txt-location";
-        txtLocation.type="text";
-        txtLocation.placeholder = "Show me the weather in...";
-        
-        const btnSearch = document.createElement("button");
-        btnSearch.type = "button";
-        btnSearch.textContent = "Search";
-        btnSearch.onclick = () => this.searchFunction(txtLocation.value);
-
-        const divLocationInputComponent = document.createElement("div");
-        divLocationInputComponent.classList.add("location-search");
-        divLocationInputComponent.appendChild(txtLocation);
-        divLocationInputComponent.appendChild(btnSearch);
-
-        return divLocationInputComponent;
     }
 }
 
